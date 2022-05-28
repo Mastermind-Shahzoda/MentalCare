@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mental care</string>
+    <string name="msg_no_network">No Internet</string>
+    <string name="action_ok">OK</string>
+    <string name="msg_uncknown_error">Uncknown error</string>
+    <string name="msg_cannot_connect_to_server">Cannot connect to server</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_bar_txt">Queues</string>
+    <string name="message">Message</string>
+    <string name="sign_up">Sign up for an appointment</string>
+    <string name="psychologists">Psychologists</string>
+    <string name="about_psychologists">About the psychologist</string>
+    <string name="hello">Hello,Shaxzoda</string>
+
+    <string name="image" translatable="false">image</string>
+    <string name="days_in_row">Days in Row</string>
+    <string name="define">Define your current mood</string>
+    <string name="happy">Happy</string>
+    <string name="good">Good</string>
+    <string name="sad">Sad</string>
+    <string name="crying">Crying</string>
+    <string name="awful">Awful</string>
+    <string name="the_nearest_queues">The nearest queues</string>
+    <string name="ai">Artificial Intelligence</string>
+
+
+    <string name="congretulation">You have successfully registered for a doctor\'s appointment.
+                           We will send you a notification or an <b> SMS</b> to your phone number as a reminder 1 day before the doctor\'s appointment and shortly before your turn.
+                            You can get more information about the queue through the  <b>Queue</b>    menu.</string>
+</resources>

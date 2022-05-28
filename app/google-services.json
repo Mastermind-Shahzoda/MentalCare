@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122020364657",
+    "project_id": "chatik-a16e4",
+    "storage_bucket": "chatik-a16e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122020364657:android:19bf2249efbef5b42936d0",
+        "android_client_info": {
+          "package_name": "mening.dasturim.technovationchalange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122020364657-seobd7em5jv3h1hhqud2hn7v5e7r5a4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSUap_MCaXvdWKX1Xeujbktz_uIvaOnY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122020364657-seobd7em5jv3h1hhqud2hn7v5e7r5a4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

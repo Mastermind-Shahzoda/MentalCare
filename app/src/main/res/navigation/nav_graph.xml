@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_queuesFragment"
+            app:destination="@id/queuesFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_verificationActivity"
+            app:destination="@id/verificationActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_consulataionFragment"
+            app:destination="@id/consulataionFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/queuesFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.queues.QueuesFragment"
+        android:label="QueuesFragment"
+        tools:layout="@layout/fragment_queues"/>
+    <activity
+        android:id="@+id/verificationActivity"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.chat.verification.VerificationActivity"
+        android:label="VerificationActivity"
+        tools:layout="@layout/activity_verification"/>
+    <fragment
+        android:id="@+id/consulataionFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.consultation.ConsulataionFragment"
+        android:label="fragment_consulataion"
+        tools:layout="@layout/fragment_consulataion" >
+        <action
+            android:id="@+id/action_consulataionFragment_to_doctorDetailsFragment"
+            app:destination="@id/doctorDetailsFragment" />
+        <action
+            android:id="@+id/action_consulataionFragment_to_irtificialFragment"
+            app:destination="@id/irtificialFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetailsFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.consultation.details.DoctorDetailsFragment"
+        android:label="fragment_doctor_details"
+        tools:layout="@layout/fragment_doctor_details" >
+        <action
+            android:id="@+id/action_doctorDetailsFragment_to_acceptionFragment"
+            app:destination="@id/acceptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acceptionFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.consultation.acception.AcceptionFragment"
+        android:label="AcceptionFragment"
+        tools:layout="@layout/fragment_acception"/>
+    <fragment
+        android:id="@+id/irtificialFragment"
+        android:name="mening.dasturim.technovationchalange.ui.main.user.consultation.ii.IrtificialFragment"
+        android:label="fragment_irtificial"
+        tools:layout="@layout/fragment_irtificial" />
+</navigation>

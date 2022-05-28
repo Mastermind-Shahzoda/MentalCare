@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="vm"
+            type="mening.dasturim.technovationchalange.ui.base.BaseVM"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_cv"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/coordinator_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:navGraph="@navigation/nav_graph"
+            />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/image"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_arrow_back"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:autoSizeMaxTextSize="30sp"
+                    android:autoSizeMinTextSize="20sp"
+                    android:autoSizeStepGranularity="2dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/app_bar_txt"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/iv_favourite"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="35dp"
+                    android:contentDescription="@string/image"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/ic_loves"
+                    />
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottom_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/white"
+                style="@style/CustomCardTopCorners"
+                app:buttonGravity="center_vertical"
+                app:fabAnimationMode="scale"
+                app:layout_anchor="@id/fab"
+                >
+
+                <ImageButton
+                    android:id="@+id/ib_home"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_home"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_clock"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_clock"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_profile"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_message"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_messages"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    />
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#95DCFF"
+                app:rippleColor="#C0EAFF"
+                app:srcCompat="@drawable/ic_baseline_add_24"
+                app:tint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck"
+                />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
